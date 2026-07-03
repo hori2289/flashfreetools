@@ -15,6 +15,7 @@
 <meta property="og:image" content="https://flashfreetools.com/images/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/css/style.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="any">
 
 </head>
@@ -23,39 +24,68 @@
 <header class="site-header">
   <div class="nav-wrap">
     <a class="logo" href="/">Flash<span>Free</span>Tools</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
     <nav class="primary-nav" aria-label="Primary"><ul>
-      <li><a href="/unit-converter.html">Unit Converter</a></li>
+      <li><a href="/json-formatter.html">JSON Formatter</a></li>
+          <li><a href="/base64.html">Base64</a></li>
+          <li><a href="/unit-converter.html">Unit Converter</a></li>
           <li><a href="/qr-generator.html">QR Generator</a></li>
           <li><a href="/calculators.html">Calculators</a></li>
-          <li><a href="/password-generator.html">Password Generator</a></li>
           <li><a href="/text-utilities.html">Text Utilities</a></li>
+          <li><a href="/password-generator.html">Password Generator</a></li>
           <li><a href="/color-tools.html">Color Tools</a></li>
-          <li><a href="/base64.html">Base64</a></li>
-          <li><a href="/json-formatter.html">JSON Formatter</a></li>
     </ul></nav>
   </div>
 </header>
 <div class="ad-slot" id="ad-top"></div>
 <main id="main" class="container">
-<article class="content-block"><h1>Contact Us</h1><p><strong>Email:</strong> <a href="mailto:contact@flashfreetools.com">contact@flashfreetools.com</a></p><p>Bug reports, tool suggestions, and advertising inquiries welcome. We aim to respond within a few business days.</p></article>
+<article class="content-block"><h1>Contact Us</h1>
+<p>Bug reports, tool suggestions, and advertising inquiries welcome. We aim to respond within a few business days.</p>
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact-thanks.html" style="margin-top:1.5rem;">
+  <input type="hidden" name="form-name" value="contact">
+  <p style="display:none;"><label>Do not fill this: <input name="bot-field"></label></p>
+  <div class="field-row"><div class="field">
+    <label for="cf-name">Name</label>
+    <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+  </div></div>
+  <div class="field-row"><div class="field">
+    <label for="cf-email">Email</label>
+    <input type="email" id="cf-email" name="email" placeholder="your@email.com" required>
+  </div></div>
+  <div class="field-row"><div class="field">
+    <label for="cf-subject">Subject</label>
+    <select id="cf-subject" name="subject">
+      <option>Bug report</option>
+      <option>Tool suggestion</option>
+      <option>Advertising inquiry</option>
+      <option>Other</option>
+    </select>
+  </div></div>
+  <div class="field-row"><div class="field">
+    <label for="cf-message">Message</label>
+    <textarea id="cf-message" name="message" placeholder="Your message..." required></textarea>
+  </div></div>
+  <button type="submit" class="btn" style="margin-top:.4rem;">Send Message</button>
+</form>
+</article>
 </main>
 <div class="ad-slot" id="ad-bottom"></div>
   <footer class="site-footer">
     <div class="footer-wrap">
-      <div><h4>Tools</h4><ul><li><a href="/unit-converter.html">Unit Converter</a></li>
+      <div><h4>Tools</h4><ul><li><a href="/json-formatter.html">JSON Formatter</a></li>
+          <li><a href="/base64.html">Base64</a></li>
+          <li><a href="/unit-converter.html">Unit Converter</a></li>
           <li><a href="/qr-generator.html">QR Generator</a></li>
           <li><a href="/calculators.html">Calculators</a></li>
-          <li><a href="/password-generator.html">Password Generator</a></li>
           <li><a href="/text-utilities.html">Text Utilities</a></li>
-          <li><a href="/color-tools.html">Color Tools</a></li>
-          <li><a href="/base64.html">Base64</a></li>
-          <li><a href="/json-formatter.html">JSON Formatter</a></li></ul></div>
+          <li><a href="/password-generator.html">Password Generator</a></li>
+          <li><a href="/color-tools.html">Color Tools</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="/about.html">About Us</a></li>
           <li><a href="/contact.html">Contact</a></li>
           <li><a href="/privacy-policy.html">Privacy Policy</a></li>
           <li><a href="/terms.html">Terms of Use</a></li>
           <li><a href="/sitemap.html">Sitemap</a></li></ul></div>
-      <div><h4>Flash Free Tools</h4><p style="font-size:.88rem;color:#94a3b8;">Free, fast, browser-based tools. No sign-up, no installs.</p></div>
+      <div><h4>Flash Free Tools</h4><p style="font-size:.88rem;color:#94a3b8;">Free, fast browser based tools. No sign up, no installs.</p></div>
     </div>
     <div class="footer-bottom">&copy; <span id="year"></span> Flash Free Tools. All rights reserved.</div>
   </footer>

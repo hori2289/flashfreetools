@@ -27,7 +27,7 @@
     if(!age){el.textContent='Enter age.';return;}
     var max=220-age;
     var hrr=max-rest;
-    var zones=[['Zone 1 — Warm-up (50-60%)',0.5,0.6],['Zone 2 — Fat Burn (60-70%)',0.6,0.7],['Zone 3 — Aerobic (70-80%)',0.7,0.8],['Zone 4 — Anaerobic (80-90%)',0.8,0.9],['Zone 5 — Max (90-100%)',0.9,1.0]];
+    var zones=[['Zone 1: Warmup (50-60%)',0.5,0.6],['Zone 2: Fat Burn (60-70%)',0.6,0.7],['Zone 3: Aerobic (70-80%)',0.7,0.8],['Zone 4: Anaerobic (80-90%)',0.8,0.9],['Zone 5: Max (90-100%)',0.9,1.0]];
     el.innerHTML=zones.map(function(z){ return '<div>'+z[0]+': '+(Math.round(rest+hrr*z[1]))+'-'+(Math.round(rest+hrr*z[2]))+' bpm</div>'; }).join('');
     el.innerHTML='Max HR: '+max+' bpm<br>'+el.innerHTML;
   });

@@ -5,7 +5,7 @@
     if(!w||!h){document.getElementById('bmi-result').textContent='Enter valid values.';return;}
     var b=(w/(h*h)).toFixed(1);
     var cat=b<18.5?'Underweight':b<25?'Normal weight':b<30?'Overweight':'Obese (Class '+(b<35?'I':b<40?'II':'III')+')';
-    document.getElementById('bmi-result').textContent='BMI: '+b+' — '+cat;
+    document.getElementById('bmi-result').textContent='BMI: '+b+', '+cat;
   });
 
   // Body Fat % (US Navy method)
@@ -21,7 +21,7 @@
     if(gender==='male') bf=495/(1.0324-0.19077*Math.log10(waist-neck)+0.15456*Math.log10(height))-450;
     else bf=495/(1.29579-0.35004*Math.log10(waist+hip-neck)+0.22100*Math.log10(height))-450;
     var cat=gender==='male'?(bf<6?'Essential':bf<14?'Athletic':bf<18?'Fitness':bf<25?'Average':'Obese'):(bf<14?'Essential':bf<21?'Athletic':bf<25?'Fitness':bf<32?'Average':'Obese');
-    r.textContent='Body Fat: '+bf.toFixed(1)+'% — '+cat;
+    r.textContent='Body Fat: '+bf.toFixed(1)+'%, '+cat;
   });
 
   // TDEE (calories)
