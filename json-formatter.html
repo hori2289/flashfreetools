@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Flash Free Tools</title>
-<meta name="description" content="Get in touch with Flash Free Tools.">
-<link rel="canonical" href="https://flashfreetools.com/contact.html">
+<title>JSON Formatter, Minifier & Validator — Free Online Tool | Flash Free Tools</title>
+<meta name="description" content="Format, minify, and validate JSON instantly. Paste JSON and get clean, readable output with syntax error detection.">
+<link rel="canonical" href="https://flashfreetools.com/json-formatter.html">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta property="og:title" content="Contact Us | Flash Free Tools">
-<meta property="og:description" content="Get in touch with Flash Free Tools.">
-<meta property="og:url" content="https://flashfreetools.com/contact.html">
+<meta property="og:title" content="JSON Formatter, Minifier & Validator — Free Online Tool | Flash Free Tools">
+<meta property="og:description" content="Format, minify, and validate JSON instantly. Paste JSON and get clean, readable output with syntax error detection.">
+<meta property="og:url" content="https://flashfreetools.com/json-formatter.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Flash Free Tools">
 <meta property="og:image" content="https://flashfreetools.com/images/og-default.png">
@@ -31,13 +31,32 @@
           <li><a href="/text-utilities.html">Text Utilities</a></li>
           <li><a href="/color-tools.html">Color Tools</a></li>
           <li><a href="/base64.html">Base64</a></li>
-          <li><a href="/json-formatter.html">JSON Formatter</a></li>
+          <li><a href="/json-formatter.html" aria-current="page">JSON Formatter</a></li>
     </ul></nav>
   </div>
 </header>
 <div class="ad-slot" id="ad-top"></div>
 <main id="main" class="container">
-<article class="content-block"><h1>Contact Us</h1><p><strong>Email:</strong> <a href="mailto:contact@flashfreetools.com">contact@flashfreetools.com</a></p><p>Bug reports, tool suggestions, and advertising inquiries welcome. We aim to respond within a few business days.</p></article>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <span aria-current="page">JSON Formatter</span></nav>
+<h1>JSON Formatter &amp; Validator</h1>
+<p>Format JSON for readability, minify for production, or validate for syntax errors.</p>
+<div class="tool-panel">
+  <label for="jf-input">Paste JSON</label>
+  <textarea id="jf-input" style="min-height:150px;font-family:monospace;" placeholder='{"name":"Flash Free Tools","tools":8}'></textarea>
+  <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.6rem;">
+    <button class="btn" id="jf-format">Format / Pretty-print</button>
+    <button class="btn btn-secondary" id="jf-minify">Minify</button>
+    <button class="btn btn-secondary" id="jf-validate">Validate</button>
+    <button class="btn btn-secondary" id="jf-clear">Clear</button>
+    <button class="btn btn-secondary" id="jf-copy">Copy Output</button>
+  </div>
+  <div id="jf-status" style="margin-top:.5rem;font-size:.9rem;" aria-live="polite"></div>
+  <div class="result-box" id="json-output" style="margin-top:.8rem;text-align:left;"></div>
+</div>
+<article class="content-block">
+  <h2>How to use</h2>
+  <p>Paste any JSON. <strong>Format</strong> adds indentation for readability. <strong>Minify</strong> compacts it for production. <strong>Validate</strong> checks for errors without changing the output. All processing uses the browser's built-in <code>JSON.parse</code> — nothing leaves your device.</p>
+</article>
 </main>
 <div class="ad-slot" id="ad-bottom"></div>
   <footer class="site-footer">
@@ -60,6 +79,6 @@
     <div class="footer-bottom">&copy; <span id="year"></span> Flash Free Tools. All rights reserved.</div>
   </footer>
 <script src="/js/site.js" defer></script>
-
+<script src="/js/json-formatter.js" defer></script>
 </body>
 </html>

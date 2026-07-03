@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Flash Free Tools</title>
-<meta name="description" content="Get in touch with Flash Free Tools.">
-<link rel="canonical" href="https://flashfreetools.com/contact.html">
+<title>Base64 Encoder & Decoder — Free Online Tool | Flash Free Tools</title>
+<meta name="description" content="Encode text to Base64 or decode Base64 strings back to plain text. Free, runs in your browser, no sign-up.">
+<link rel="canonical" href="https://flashfreetools.com/base64.html">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta property="og:title" content="Contact Us | Flash Free Tools">
-<meta property="og:description" content="Get in touch with Flash Free Tools.">
-<meta property="og:url" content="https://flashfreetools.com/contact.html">
+<meta property="og:title" content="Base64 Encoder & Decoder — Free Online Tool | Flash Free Tools">
+<meta property="og:description" content="Encode text to Base64 or decode Base64 strings back to plain text. Free, runs in your browser, no sign-up.">
+<meta property="og:url" content="https://flashfreetools.com/base64.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Flash Free Tools">
 <meta property="og:image" content="https://flashfreetools.com/images/og-default.png">
@@ -30,14 +30,44 @@
           <li><a href="/password-generator.html">Password Generator</a></li>
           <li><a href="/text-utilities.html">Text Utilities</a></li>
           <li><a href="/color-tools.html">Color Tools</a></li>
-          <li><a href="/base64.html">Base64</a></li>
+          <li><a href="/base64.html" aria-current="page">Base64</a></li>
           <li><a href="/json-formatter.html">JSON Formatter</a></li>
     </ul></nav>
   </div>
 </header>
 <div class="ad-slot" id="ad-top"></div>
 <main id="main" class="container">
-<article class="content-block"><h1>Contact Us</h1><p><strong>Email:</strong> <a href="mailto:contact@flashfreetools.com">contact@flashfreetools.com</a></p><p>Bug reports, tool suggestions, and advertising inquiries welcome. We aim to respond within a few business days.</p></article>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <span aria-current="page">Base64 Encoder/Decoder</span></nav>
+<h1>Base64 Encoder &amp; Decoder</h1>
+<p>Encode plain text to Base64 or decode Base64 strings back to readable text.</p>
+<div class="tool-panel">
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="b64-encode">Encode</button>
+    <button class="tab-btn" data-tab="b64-decode">Decode</button>
+  </div>
+  <div class="tab-pane active" id="b64-encode">
+    <label for="b64-input">Plain text</label>
+    <textarea id="b64-input" placeholder="Enter text to encode..."></textarea>
+    <div style="margin-top:.6rem;display:flex;gap:.4rem;flex-wrap:wrap;">
+      <button class="btn" id="b64-encode-btn">Encode to Base64</button>
+      <button class="btn btn-secondary" id="b64-copy-encode">Copy</button>
+    </div>
+    <div class="result-box" id="b64-encode-result" aria-live="polite"></div>
+  </div>
+  <div class="tab-pane" id="b64-decode">
+    <label for="b64-decode-input">Base64 string</label>
+    <textarea id="b64-decode-input" placeholder="Paste Base64 here..."></textarea>
+    <div style="margin-top:.6rem;display:flex;gap:.4rem;flex-wrap:wrap;">
+      <button class="btn" id="b64-decode-btn">Decode from Base64</button>
+      <button class="btn btn-secondary" id="b64-copy-decode">Copy</button>
+    </div>
+    <div class="result-box" id="b64-decode-result" aria-live="polite"></div>
+  </div>
+</div>
+<article class="content-block">
+  <h2>What is Base64?</h2>
+  <p>Base64 converts binary or text data into ASCII characters. Common uses: embedding images in HTML as data URIs, encoding API credentials for HTTP Basic Auth, JWT tokens, and debugging encoded API responses.</p>
+</article>
 </main>
 <div class="ad-slot" id="ad-bottom"></div>
   <footer class="site-footer">
@@ -60,6 +90,6 @@
     <div class="footer-bottom">&copy; <span id="year"></span> Flash Free Tools. All rights reserved.</div>
   </footer>
 <script src="/js/site.js" defer></script>
-
+<script src="/js/base64.js" defer></script>
 </body>
 </html>

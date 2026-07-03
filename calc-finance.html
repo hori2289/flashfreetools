@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finance Calculators — Loan, Compound Interest, Tip & Tax | Flash Free Tools</title>
+<meta name="description" content="Free finance calculators: loan payment, compound interest, tip, sales tax, and savings goal.">
+<link rel="canonical" href="https://flashfreetools.com/calc-finance.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:title" content="Finance Calculators — Loan, Compound Interest, Tip & Tax | Flash Free Tools">
+<meta property="og:description" content="Free finance calculators: loan payment, compound interest, tip, sales tax, and savings goal.">
+<meta property="og:url" content="https://flashfreetools.com/calc-finance.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Flash Free Tools">
+<meta property="og:image" content="https://flashfreetools.com/images/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="logo" href="/">Flash<span>Free</span>Tools</a>
+    <nav class="primary-nav" aria-label="Primary"><ul>
+      <li><a href="/unit-converter.html">Unit Converter</a></li>
+          <li><a href="/qr-generator.html">QR Generator</a></li>
+          <li><a href="/calculators.html">Calculators</a></li>
+          <li><a href="/password-generator.html">Password Generator</a></li>
+          <li><a href="/text-utilities.html">Text Utilities</a></li>
+          <li><a href="/color-tools.html">Color Tools</a></li>
+          <li><a href="/base64.html">Base64</a></li>
+          <li><a href="/json-formatter.html">JSON Formatter</a></li>
+    </ul></nav>
+  </div>
+</header>
+<div class="ad-slot" id="ad-top"></div>
+<main id="main" class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/calculators.html">Calculators</a> &rsaquo; <span aria-current="page">Finance</span></nav>
+<h1>Finance Calculators</h1>
+<div class="tool-panel"><h2 style="margin-top:0">Loan Payment Calculator</h2>
+  <div class="field-row">
+    <div class="field"><label for="loan-principal">Loan Amount ($)</label><input type="number" id="loan-principal" value="10000"></div>
+    <div class="field"><label for="loan-rate">Annual Rate (%)</label><input type="number" id="loan-rate" value="5"></div>
+    <div class="field"><label for="loan-months">Term (months)</label><input type="number" id="loan-months" value="60"></div>
+  </div>
+  <button class="btn" id="loan-calc">Calculate</button>
+  <div class="result-box" id="loan-result" aria-live="polite"></div>
+</div>
+<div class="tool-panel"><h2 style="margin-top:0">Compound Interest</h2>
+  <div class="field-row">
+    <div class="field"><label for="ci-principal">Principal ($)</label><input type="number" id="ci-principal" value="1000"></div>
+    <div class="field"><label for="ci-rate">Annual Rate (%)</label><input type="number" id="ci-rate" value="7"></div>
+  </div>
+  <div class="field-row">
+    <div class="field"><label for="ci-compound">Compounding</label>
+      <select id="ci-compound"><option value="1">Annually</option><option value="4">Quarterly</option><option value="12" selected>Monthly</option><option value="365">Daily</option></select>
+    </div>
+    <div class="field"><label for="ci-years">Years</label><input type="number" id="ci-years" value="10"></div>
+  </div>
+  <button class="btn" id="ci-calc">Calculate</button>
+  <div class="result-box" id="ci-result" aria-live="polite"></div>
+</div>
+<div class="tool-panel"><h2 style="margin-top:0">Tip Calculator</h2>
+  <div class="field-row">
+    <div class="field"><label for="tip-bill">Bill ($)</label><input type="number" id="tip-bill" value="50"></div>
+    <div class="field"><label for="tip-pct">Tip (%)</label><input type="number" id="tip-pct" value="18"></div>
+    <div class="field"><label for="tip-people">Split Between</label><input type="number" id="tip-people" value="2"></div>
+  </div>
+  <button class="btn" id="tip-calc">Calculate</button>
+  <div class="result-box" id="tip-result" aria-live="polite"></div>
+</div>
+<div class="tool-panel"><h2 style="margin-top:0">Sales Tax Calculator</h2>
+  <div class="field-row">
+    <div class="field"><label for="tax-price">Price ($)</label><input type="number" id="tax-price" value="100"></div>
+    <div class="field"><label for="tax-rate">Tax Rate (%)</label><input type="number" id="tax-rate" value="8.5"></div>
+  </div>
+  <button class="btn" id="tax-calc">Calculate</button>
+  <div class="result-box" id="tax-result" aria-live="polite"></div>
+</div>
+<div class="tool-panel"><h2 style="margin-top:0">Savings Goal</h2>
+  <div class="field-row">
+    <div class="field"><label for="savings-goal">Goal ($)</label><input type="number" id="savings-goal" value="5000"></div>
+    <div class="field"><label for="savings-have">Already Saved ($)</label><input type="number" id="savings-have" value="0"></div>
+    <div class="field"><label for="savings-months">Months</label><input type="number" id="savings-months" value="12"></div>
+  </div>
+  <button class="btn" id="savings-calc">Calculate</button>
+  <div class="result-box" id="savings-result" aria-live="polite"></div>
+</div>
+</main>
+<div class="ad-slot" id="ad-bottom"></div>
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <div><h4>Tools</h4><ul><li><a href="/unit-converter.html">Unit Converter</a></li>
+          <li><a href="/qr-generator.html">QR Generator</a></li>
+          <li><a href="/calculators.html">Calculators</a></li>
+          <li><a href="/password-generator.html">Password Generator</a></li>
+          <li><a href="/text-utilities.html">Text Utilities</a></li>
+          <li><a href="/color-tools.html">Color Tools</a></li>
+          <li><a href="/base64.html">Base64</a></li>
+          <li><a href="/json-formatter.html">JSON Formatter</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Use</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li></ul></div>
+      <div><h4>Flash Free Tools</h4><p style="font-size:.88rem;color:#94a3b8;">Free, fast, browser-based tools. No sign-up, no installs.</p></div>
+    </div>
+    <div class="footer-bottom">&copy; <span id="year"></span> Flash Free Tools. All rights reserved.</div>
+  </footer>
+<script src="/js/site.js" defer></script>
+<script src="/js/calc-finance.js" defer></script>
+</body>
+</html>

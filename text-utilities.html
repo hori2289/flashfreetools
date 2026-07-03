@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Text Utilities - Word Counter & Case Converter | Flash Free Tools</title>
-<meta name="description" content="Free text tools: word counter, character counter, case converter, and whitespace cleanup. No sign-up required.">
+<title>Text Utilities — Word Counter, Reading Time, Case Converter | Flash Free Tools</title>
+<meta name="description" content="Free text tools: word count, reading time, character count, case converter, reverse text, remove duplicate lines, character frequency.">
 <link rel="canonical" href="https://flashfreetools.com/text-utilities.html">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta property="og:title" content="Text Utilities - Word Counter & Case Converter | Flash Free Tools">
-<meta property="og:description" content="Free text tools: word counter, character counter, case converter, and whitespace cleanup. No sign-up required.">
+<meta property="og:title" content="Text Utilities — Word Counter, Reading Time, Case Converter | Flash Free Tools">
+<meta property="og:description" content="Free text tools: word count, reading time, character count, case converter, reverse text, remove duplicate lines, character frequency.">
 <meta property="og:url" content="https://flashfreetools.com/text-utilities.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Flash Free Tools">
@@ -17,109 +17,77 @@
 <link rel="stylesheet" href="/css/style.css">
 <link rel="icon" href="/favicon.ico" sizes="any">
 
-
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="nav-wrap">
-    <a class="logo" href="/" >Flash<span>Free</span>Tools</a>
-    <nav class="primary-nav" aria-label="Primary">
-      <ul>
-        <li><a href="/unit-converter.html">Unit Converter</a></li>
+    <a class="logo" href="/">Flash<span>Free</span>Tools</a>
+    <nav class="primary-nav" aria-label="Primary"><ul>
+      <li><a href="/unit-converter.html">Unit Converter</a></li>
           <li><a href="/qr-generator.html">QR Generator</a></li>
           <li><a href="/calculators.html">Calculators</a></li>
           <li><a href="/password-generator.html">Password Generator</a></li>
           <li><a href="/text-utilities.html" aria-current="page">Text Utilities</a></li>
-      </ul>
-    </nav>
+          <li><a href="/color-tools.html">Color Tools</a></li>
+          <li><a href="/base64.html">Base64</a></li>
+          <li><a href="/json-formatter.html">JSON Formatter</a></li>
+    </ul></nav>
   </div>
 </header>
-
-
-  <div class="ad-slot" id="ad-top">
-    <!-- AdSense slot: enable <ins> tag once ad units are created in AdSense dashboard -->
-    <!--
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2356800923282920" data-ad-slot="REPLACE_SLOT_ID" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    -->
-  </div>
-
-
+<div class="ad-slot" id="ad-top"></div>
 <main id="main" class="container">
-
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <span aria-current="page">Text Utilities</span></nav>
 <h1>Text Utilities</h1>
-<p>Word counter, case converter, and text cleanup &mdash; all in one place.</p>
-
+<p>Paste or type text to get instant stats and transform it in one click.</p>
 <div class="tool-panel">
   <label for="tu-input">Your text</label>
   <textarea id="tu-input" placeholder="Paste or type text here..."></textarea>
-  <div class="field-row" style="margin-top:0.8rem;">
-    <button class="btn btn-secondary" id="tu-upper">UPPERCASE</button>
-    <button class="btn btn-secondary" id="tu-lower">lowercase</button>
-    <button class="btn btn-secondary" id="tu-title">Title Case</button>
-    <button class="btn btn-secondary" id="tu-trim">Trim Extra Spaces</button>
+  <div class="result-box" id="tu-stats" style="margin-top:.6rem;font-weight:normal;" aria-live="polite"></div>
+  <div style="margin-top:1rem;">
+    <p style="margin:0 0 .4rem;font-size:.82rem;font-weight:700;color:var(--color-text-muted);text-transform:uppercase;">Case</p>
+    <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
+      <button class="btn btn-secondary" id="tu-upper">UPPERCASE</button>
+      <button class="btn btn-secondary" id="tu-lower">lowercase</button>
+      <button class="btn btn-secondary" id="tu-title">Title Case</button>
+      <button class="btn btn-secondary" id="tu-sentence">Sentence case</button>
+    </div>
+    <p style="margin:.8rem 0 .4rem;font-size:.82rem;font-weight:700;color:var(--color-text-muted);text-transform:uppercase;">Transform</p>
+    <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
+      <button class="btn btn-secondary" id="tu-trim">Trim Spaces</button>
+      <button class="btn btn-secondary" id="tu-reverse">Reverse Text</button>
+      <button class="btn btn-secondary" id="tu-remove-dupes">Remove Duplicate Lines</button>
+      <button class="btn btn-secondary" id="tu-freq">Char Frequency</button>
+      <button class="btn btn-secondary" id="tu-copy">Copy Text</button>
+    </div>
   </div>
-  <div class="result-box" id="tu-stats" aria-live="polite"></div>
+  <div id="tu-freq-output" style="margin-top:1rem;"></div>
 </div>
-
 <article class="content-block">
-  <h2>What this tool does</h2>
-  <p>Paste any text to instantly see word count, character count, and sentence count, or transform the text's case. Useful for writers, students, and developers cleaning up copy before publishing.</p>
-  <dl class="faq">
-    <h2>Frequently asked questions</h2>
-    <dt>Is there a text length limit?</dt>
-    <dd>No hard limit &mdash; the tool processes text directly in your browser, so very large documents are handled fine on modern devices.</dd>
-  </dl>
+  <h2>About these tools</h2>
+  <p>Reading time is estimated at 200 words per minute (average adult silent reading speed). Character frequency shows the 20 most common non-space characters in your text. Nothing you type is sent anywhere — all processing is local.</p>
 </article>
-
 </main>
-
-
-  <div class="ad-slot" id="ad-bottom">
-    <!-- AdSense slot: enable <ins> tag once ad units are created in AdSense dashboard -->
-    <!--
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2356800923282920" data-ad-slot="REPLACE_SLOT_ID" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    -->
-  </div>
-
-
-
+<div class="ad-slot" id="ad-bottom"></div>
   <footer class="site-footer">
     <div class="footer-wrap">
-      <div>
-        <h4>Tools</h4>
-        <ul>
-          <li><a href="/unit-converter.html">Unit Converter</a></li>
+      <div><h4>Tools</h4><ul><li><a href="/unit-converter.html">Unit Converter</a></li>
           <li><a href="/qr-generator.html">QR Generator</a></li>
           <li><a href="/calculators.html">Calculators</a></li>
           <li><a href="/password-generator.html">Password Generator</a></li>
           <li><a href="/text-utilities.html">Text Utilities</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul>
-          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/color-tools.html">Color Tools</a></li>
+          <li><a href="/base64.html">Base64</a></li>
+          <li><a href="/json-formatter.html">JSON Formatter</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/about.html">About Us</a></li>
           <li><a href="/contact.html">Contact</a></li>
           <li><a href="/privacy-policy.html">Privacy Policy</a></li>
           <li><a href="/terms.html">Terms of Use</a></li>
-          <li><a href="/sitemap.html">Sitemap</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Flash Free Tools</h4>
-        <p style="font-size:0.88rem;color:#94a3b8;">Free, fast, browser-based tools. No sign-up, no installs.</p>
-      </div>
+          <li><a href="/sitemap.html">Sitemap</a></li></ul></div>
+      <div><h4>Flash Free Tools</h4><p style="font-size:.88rem;color:#94a3b8;">Free, fast, browser-based tools. No sign-up, no installs.</p></div>
     </div>
-    <div class="footer-bottom">
-      &copy; <span id="year"></span> Flash Free Tools. All rights reserved.
-    </div>
+    <div class="footer-bottom">&copy; <span id="year"></span> Flash Free Tools. All rights reserved.</div>
   </footer>
-
-
 <script src="/js/site.js" defer></script>
 <script src="/js/text-utilities.js" defer></script>
 </body>
