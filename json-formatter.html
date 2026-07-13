@@ -37,7 +37,7 @@
     </ul></nav>
   </div>
 </header>
-<div class="ad-slot" id="ad-top"></div>
+
 <main id="main" class="container">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <span aria-current="page">JSON Formatter</span></nav>
 <h1>JSON Formatter &amp; Validator</h1>
@@ -56,11 +56,32 @@
   <div class="result-box" id="json-output" style="margin-top:.8rem;text-align:left;"></div>
 </div>
 <article class="content-block">
-  <h2>How to use</h2>
-  <p>Paste any JSON. <strong>Format</strong> adds indentation for readability. <strong>Minify</strong> compacts it for production. <strong>Validate</strong> checks for errors without changing the output. All processing uses the browser's built-in <code>JSON.parse</code> — nothing leaves your device.</p>
+  <h2>How to use the JSON formatter</h2>
+  <p>Paste your JSON into the text area. Click <strong>Format</strong> to add consistent indentation and line breaks, making the structure easy to read. Click <strong>Minify</strong> to remove all whitespace and produce a compact single-line version for use in production code or APIs. Click <strong>Validate</strong> to check whether the JSON is syntactically correct without changing the output. If there is a syntax error, a red status message explains what went wrong. Click <strong>Copy Output</strong> to copy the result to your clipboard.</p>
+  <h2>What is JSON?</h2>
+  <p>JSON (JavaScript Object Notation) is a lightweight text format used to store and exchange structured data. It was originally derived from JavaScript but is now used by virtually every programming language and API. JSON represents data as key-value pairs inside curly braces, arrays inside square brackets, and supports strings, numbers, booleans, null, objects, and arrays as values.</p>
+  <p>A simple JSON example: <code>{"name": "Alice", "age": 30, "active": true}</code>. A JSON array example: <code>[1, 2, 3, "four"]</code>. JSON objects can be nested inside each other to represent complex hierarchical data structures.</p>
+  <h2>Common uses for JSON</h2>
+  <p><strong>API responses:</strong> Almost every REST API returns data as JSON. When debugging an API, pasting the response into this formatter makes it much easier to read the structure and find specific values.</p>
+  <p><strong>Configuration files:</strong> Many applications use JSON for configuration, including package.json in Node.js projects, settings in VS Code, and app manifests.</p>
+  <p><strong>Data exchange:</strong> JSON is used to pass data between a frontend and backend, between microservices, and for storing structured data in databases like MongoDB.</p>
+  <h2>Common JSON errors and how to fix them</h2>
+  <p><strong>Trailing comma:</strong> JSON does not allow a comma after the last item in an object or array. Remove the final comma before the closing brace or bracket.</p>
+  <p><strong>Unquoted keys:</strong> All object keys must be in double quotes. Single quotes are not valid JSON. Change <code>{'key': 'value'}</code> to <code>{"key": "value"}</code>.</p>
+  <p><strong>Single quotes for strings:</strong> JSON requires double quotes for strings. Replace all single-quoted string values with double-quoted ones.</p>
+  <p><strong>Comments:</strong> JSON does not support comments. Remove any <code>// comment</code> or <code>/* comment */</code> lines before processing.</p>
+  <h2>Frequently asked questions</h2>
+  <dl class="faq">
+    <dt>Does this tool send my JSON to a server?</dt>
+    <dd>No. All processing uses the built-in <code>JSON.parse</code> and <code>JSON.stringify</code> functions in your browser. Nothing is transmitted anywhere. Your data stays on your device.</dd>
+    <dt>What is the difference between formatting and validating?</dt>
+    <dd>Formatting changes the visual appearance of the JSON by adding indentation, but only works if the JSON is already valid. Validating checks whether the JSON conforms to the JSON specification and reports any syntax errors. You can validate without formatting to check validity without modifying your output.</dd>
+    <dt>Can I format very large JSON files?</dt>
+    <dd>Yes, but very large files may be slow to process depending on your device. There is no size limit imposed by the tool. For files over several megabytes, processing may take a second or two.</dd>
+  </dl>
 </article>
 </main>
-<div class="ad-slot" id="ad-bottom"></div>
+
   <footer class="site-footer">
     <div class="footer-wrap">
       <div><h4>Tools</h4><ul><li><a href="/json-formatter.html">JSON Formatter</a></li>

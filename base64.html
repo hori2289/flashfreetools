@@ -37,7 +37,7 @@
     </ul></nav>
   </div>
 </header>
-<div class="ad-slot" id="ad-top"></div>
+
 <main id="main" class="container">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <span aria-current="page">Base64 Encoder/Decoder</span></nav>
 <h1>Base64 Encoder &amp; Decoder</h1>
@@ -68,10 +68,28 @@
 </div>
 <article class="content-block">
   <h2>What is Base64?</h2>
-  <p>Base64 converts binary or text data into ASCII characters. Common uses: embedding images in HTML as data URIs, encoding API credentials for HTTP Basic Auth, JWT tokens, and debugging encoded API responses.</p>
+  <p>Base64 is an encoding scheme that converts binary data into a string of ASCII characters. The name comes from the fact that it uses 64 printable characters (A through Z, a through z, 0 through 9, plus + and /) to represent data. For every 3 bytes of input, Base64 produces 4 characters of output, making the encoded version about 33% larger than the original.</p>
+  <p>Base64 is not encryption. It does not make data secret. It is purely an encoding method that allows binary data to be safely transmitted in systems that only handle text, such as email bodies, HTML attributes, and JSON fields.</p>
+  <h2>Common uses for Base64</h2>
+  <p><strong>Data URIs:</strong> Embedding images directly in HTML or CSS without a separate file request. For example: <code>src="data:image/png;base64,iVBORw0KGgo..."</code>. This avoids an extra HTTP request but increases the HTML file size.</p>
+  <p><strong>HTTP Basic Authentication:</strong> When a browser or client sends a username and password using HTTP Basic Auth, it encodes them as Base64. The header looks like: <code>Authorization: Basic dXNlcjpwYXNzd29yZA==</code>. This is why Basic Auth requires HTTPS, since the encoding is trivially reversible.</p>
+  <p><strong>JSON Web Tokens (JWT):</strong> JWTs consist of three Base64-encoded sections separated by dots: a header, a payload, and a signature. Pasting a JWT into the decoder reveals the header and payload as readable JSON.</p>
+  <p><strong>Email attachments:</strong> The MIME standard uses Base64 to encode binary file attachments so they can be transmitted as plain text through email servers.</p>
+  <p><strong>Debugging API responses:</strong> Some APIs return Base64-encoded data. Decoding it reveals the original content, which is useful for troubleshooting.</p>
+  <h2>Frequently asked questions</h2>
+  <dl class="faq">
+    <dt>Is Base64 the same as encryption?</dt>
+    <dd>No. Base64 is encoding, not encryption. Anyone who receives a Base64 string can decode it in seconds without any key or password. Never use Base64 to protect sensitive information. Use proper encryption algorithms for security.</dd>
+    <dt>Why does Base64 output end with == sometimes?</dt>
+    <dd>Base64 encodes every 3 bytes into 4 characters. When the input length is not a multiple of 3, padding characters (=) are added to the end to complete the last group. One = means one byte of padding, and == means two bytes of padding.</dd>
+    <dt>Why does my decoded text look like gibberish?</dt>
+    <dd>Base64 decoding assumes the original data was text. If the original content was binary data (like an image or a compiled file), decoding it as text will produce unreadable characters. Base64 is only useful for round-tripping text that was originally text.</dd>
+    <dt>Does this tool handle Unicode characters?</dt>
+    <dd>Yes. The encoder converts Unicode text to UTF-8 bytes before encoding, so characters outside the basic ASCII range are handled correctly. The decoder reverses this process.</dd>
+  </dl>
 </article>
 </main>
-<div class="ad-slot" id="ad-bottom"></div>
+
   <footer class="site-footer">
     <div class="footer-wrap">
       <div><h4>Tools</h4><ul><li><a href="/json-formatter.html">JSON Formatter</a></li>

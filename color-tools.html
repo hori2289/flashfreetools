@@ -37,7 +37,7 @@
     </ul></nav>
   </div>
 </header>
-<div class="ad-slot" id="ad-top"></div>
+
 <main id="main" class="container">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <span aria-current="page">Color Tools</span></nav>
 <h1>Color Picker &amp; Converter</h1>
@@ -65,11 +65,26 @@
   </div>
 </div>
 <article class="content-block">
-  <h2>When to use each format</h2>
-  <p><strong>Hex</strong> — most common in web CSS and design tools. <strong>RGB</strong> — useful when you need rgba() for opacity. <strong>HSL</strong> — easiest for adjusting brightness and saturation programmatically.</p>
+  <h2>How to use the color converter</h2>
+  <p>Click the color picker square to open your browser color chooser and select any color visually. Alternatively, type a hex code directly into the hex input field and click Convert. The tool instantly shows the equivalent values in HEX, RGB, and HSL formats, displays a color preview swatch, and suggests whether black or white text provides better contrast on that background.</p>
+  <h2>Understanding color formats</h2>
+  <p><strong>HEX (hexadecimal)</strong> is the most widely used format in web design and graphic design software. A hex code like #2563EB represents the red, green, and blue components as pairs of hexadecimal digits ranging from 00 to FF. It is compact and easy to copy into CSS or design tools.</p>
+  <p><strong>RGB (Red Green Blue)</strong> expresses each color channel as a number from 0 to 255. The format rgb(37, 99, 235) is used directly in CSS and is helpful when you need to apply transparency using rgba(), such as rgba(37, 99, 235, 0.5) for a 50% transparent version of the color.</p>
+  <p><strong>HSL (Hue Saturation Lightness)</strong> is the most intuitive format for humans to reason about color. Hue is a degree on the color wheel from 0 to 360. Saturation is the intensity of the color from 0% (gray) to 100% (vivid). Lightness runs from 0% (black) to 100% (white). HSL makes it easy to create color variations by adjusting only the lightness or saturation values.</p>
+  <h2>Color contrast and accessibility</h2>
+  <p>Web accessibility guidelines (WCAG) require a minimum contrast ratio of 4.5:1 between text and its background for normal text. The converter calculates the relative luminance of your chosen color and recommends whether black or white text provides better readability. Dark colors generally pair better with white text and light colors with black text.</p>
+  <h2>Frequently asked questions</h2>
+  <dl class="faq">
+    <dt>What is the difference between #RGB and #RRGGBB hex codes?</dt>
+    <dd>The shorthand #RGB format uses three digits where each digit is doubled. So #2EB is the same as #22EEBB. The full #RRGGBB format gives more precise control over each channel with 256 possible values rather than 16.</dd>
+    <dt>Can I enter a color name like "red" or "blue"?</dt>
+    <dd>The converter accepts only hex codes in the text input. For named colors, use your browser developer tools to find the hex equivalent, or type the hex value directly.</dd>
+    <dt>Why does the contrast suggestion matter?</dt>
+    <dd>Text that does not have enough contrast against its background is difficult to read for people with low vision or color blindness. Choosing colors that meet WCAG contrast standards makes your design accessible to a wider audience.</dd>
+  </dl>
 </article>
 </main>
-<div class="ad-slot" id="ad-bottom"></div>
+
   <footer class="site-footer">
     <div class="footer-wrap">
       <div><h4>Tools</h4><ul><li><a href="/json-formatter.html">JSON Formatter</a></li>
